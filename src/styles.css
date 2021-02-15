@@ -1,0 +1,428 @@
+/* Add application styles & imports to this file! */
+
+:root {
+  /*colores*/
+  --col-1: #df1683;
+  --col-1h: #d91174;
+  --col-2: #223282;
+  --col-2h: #17256a;
+  --col-txt: #ffffff;
+
+  --padding-w: 20px;
+  --padding-h: 10px;
+  --border-w: 2px;
+
+  --padding: 10px;
+  --margin: 15px;
+
+  /*sombra*/
+  --sombra-col: rgba(0, 0, 0, 0.3);
+
+  --padding-w: 20px;
+  --padding-h: 10px;
+  --border-w: 2px;
+
+  --padding: 10px;
+  --margin: 15px;
+
+  /*sombra*/
+  --sombra-col: rgba(0, 0, 0, 0.3);
+  --sombra-l: 3px;
+  --sombra-t: 3px;
+  --sombra-sep: 4px;
+
+  /*sombra input*/
+  --sombra-input-col: rgba(0, 0, 0, 0.3);
+  --sombra-input-l: 1px;
+  --sombra-input-t: 1px;
+  --sombra-input-sep: 3px;
+
+  /*cabecera*/
+  --tam-logo: 70px;
+  --dist-linea-sel: 15px;
+  --acciones-w: 150px;
+  --info-w: 160px;
+  --col-cab: white;
+  --avatar: 45px;
+
+  --radius: 10px;
+  --radius-btn: 10px;
+}
+html,
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Roboto", sans-serif;
+}
+/*input*/
+.input {
+  display: block;
+  width: 100%;
+}
+input[type="submit"] {
+  outline: none;
+  background: var(--col-1);
+  border-radius: var(--radius-btn);
+  color: var(--col-txt);
+  padding: var(--padding-h) var(--padding-w);
+  border: solid var(--border-w) var(--col-1);
+  box-shadow: var(--sombra-l) var(--sombra-t) var(--sombra-sep)
+    var(--sombra-col);
+  transition: all 0.5s;
+}
+input[type="submit"]:hover {
+  cursor: pointer;
+  background: var(--col-1h);
+  border: solid var(--border-w) var(--col-1h);
+  box-shadow: calc(var(--sombra-l) + 1px) calc(var(--sombra-t) + 1px)
+    calc(var(--sombra-sep) + 3px) var(--sombra-col);
+}
+input {
+  outline: none;
+  border-radius: var(--radius);
+  border: none;
+  margin-bottom: var(--margin);
+  box-shadow: var(--sombra-input-l) var(--sombra-input-t)
+    var(--sombra-input-sep) var(--sombra-input-col);
+  padding: var(--padding-h) var(--padding-w);
+}
+.input input {
+  width: calc(100% - var(--padding-w) * 2);
+}
+.input input[type="checkbox"] {
+  width: auto;
+}
+/*buttons*/
+button {
+  outline: none;
+  background: var(--col-1);
+  border-radius: var(--radius-btn);
+  color: var(--col-txt);
+  padding: var(--padding-h) var(--padding-w);
+  border: solid var(--border-w) var(--col-1);
+  box-shadow: var(--sombra-l) var(--sombra-t) var(--sombra-sep)
+    var(--sombra-col);
+  transition: all 0.5s;
+}
+button:hover {
+  cursor: pointer;
+  background: var(--col-1h);
+  border: solid var(--border-w) var(--col-1h);
+  box-shadow: calc(var(--sombra-l) + 1px) calc(var(--sombra-t) + 1px)
+    calc(var(--sombra-sep) + 3px) var(--sombra-col);
+}
+button.deg {
+  background: var(--col-1);
+  border: none;
+  padding: calc(var(--padding-h) + 2px) var(--padding-w);
+  background: -moz-linear-gradient(90deg, var(--col-1) 0%, var(--col-2) 100%);
+  background: -webkit-linear-gradient(
+    90deg,
+    var(--col-1) 0%,
+    var(--col-2) 100%
+  );
+  background: linear-gradient(90deg, var(--col-1) 0%, var(--col-2) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="var(--col-1)",endColorstr="var(--col-2)",GradientType=1);
+}
+button.secundario {
+  background: var(--col-2);
+  border: solid var(--border-w) var(--col-2);
+}
+button.secundario:hover {
+  cursor: pointer;
+  background: var(--col-2h);
+  border: solid var(--border-w) var(--col-2h);
+}
+button.linea {
+  background: white;
+  color: var(--col-1);
+}
+button.linea.secundario {
+  background: white;
+  color: var(--col-2);
+}
+/*tarjeta*/
+.tarjeta {
+  box-shadow: var(--sombra-l) var(--sombra-t) var(--sombra-sep)
+    var(--sombra-col);
+  padding: var(--padding);
+  border-radius: var(--radius);
+  text-align: initial;
+}
+.tarjeta .cab {
+  object-fit: cover;
+  object-position: center;
+  height: 200px;
+  left: calc(-1 * var(--padding));
+  top: calc(-1 * var(--padding));
+  width: calc(100% + var(--padding) * 2);
+  position: relative;
+  border-radius: var(--radius) var(--radius) 0px 0px;
+}
+
+/*general*/
+.radius {
+  border-radius: var(--radius);
+}
+.deg {
+  background: var(--col-1);
+  background: -moz-linear-gradient(90deg, var(--col-1) 0%, var(--col-2) 100%);
+  background: -webkit-linear-gradient(
+    90deg,
+    var(--col-1) 0%,
+    var(--col-2) 100%
+  );
+  background: linear-gradient(90deg, var(--col-1) 0%, var(--col-2) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="var(--col-1)",endColorstr="var(--col-2)",GradientType=1);
+}
+
+/*cabecera*/
+.cabecera {
+  padding: var(--margin);
+  box-shadow: 0 var(--sombra-t) var(--sombra-sep) var(--sombra-col);
+  margin-bottom: var(--margin);
+  color: var(--col-cab);
+}
+/*logo*/
+.cabecera .logo > img {
+  object-fit: contain;
+  width: 100%;
+}
+
+.cabecera .logo {
+  width: var(--tam-logo);
+  vertical-align: -webkit-baseline-middle;
+  display: inline-block;
+  margin-right: calc(var(--margin) * 2);
+}
+/*menu*/
+
+.cabecera .menu {
+  display: inline-block;
+  width: calc(
+    100% - var(--tam-logo) - var(--margin) * 4 - var(--acciones-w) -
+      var(--info-w) - var(--avatar)
+  );
+  vertical-align: -webkit-baseline-middle;
+}
+.cabecera .menu .item {
+  display: inline-block;
+  margin: 0px var(--margin);
+  position: relative;
+  cursor: pointer;
+}
+.cabecera .menu .item.activo:after,
+.cabecera .menu .item:hover:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: calc(var(--margin) * -1 - var(--dist-linea-sel));
+  height: 5px;
+  background: var(--col-cab);
+}
+/*derecha*/
+
+.cabecera .derecha {
+  display: inline-block;
+  width: calc(
+    var(--acciones-w) + var(--info-w) + var(--avatar) + var(--margin) * 2
+  );
+  vertical-align: -webkit-baseline-middle;
+}
+
+.cabecera .derecha .acciones {
+  display: inline-block;
+  vertical-align: -webkit-baseline-middle;
+  width: var(--acciones-w);
+  margin-right: var(--margin);
+}
+.cabecera .derecha .info {
+  display: inline-block;
+  vertical-align: -webkit-baseline-middle;
+  margin-right: var(--margin);
+  width: var(--info-w);
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  text-align: right;
+}
+.cabecera .derecha .info .primaria {
+  font-weight: 500;
+}
+.cabecera .derecha .info .secundaria {
+  font-size: 9pt;
+  font-weight: 300;
+}
+.cabecera .derecha .info .primaria,
+.cabecera .derecha .info .secundaria {
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.cabecera .derecha .avatar {
+  display: inline-block;
+  vertical-align: -webkit-baseline-middle;
+}
+.cabecera .derecha .avatar img {
+  width: var(--avatar);
+  height: var(--avatar);
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+/*display*/
+.container {
+  display: block;
+  margin: var(--margin);
+}
+.container > * {
+  display: inline-block;
+  margin-bottom: var(--margin);
+}
+.container > .col_1 {
+  width: 100%;
+}
+.container > .col_2 {
+  width: calc(100% / 2 - (var(--padding) * 2) - (var(--margin)));
+}
+.container > .col_3 {
+  width: calc(100% / 3 - (var(--padding) * 2) - (var(--margin) * 4 / 3));
+  margin-left: var(--margin);
+  margin-right: var(--margin);
+}
+.container > .col_4 {
+  width: calc(100% / 4 - (var(--padding) * 2) - (var(--margin) * 6 / 4));
+  margin-left: var(--margin);
+  margin-right: var(--margin);
+}
+.container > .col_5 {
+  width: calc(100% / 5 - (var(--padding) * 2) - (var(--margin) * 8 / 5));
+  margin-left: var(--margin);
+  margin-right: var(--margin);
+}
+.container > .col_6 {
+  width: calc(100% / 6 - (var(--padding) * 2) - (var(--margin) * 10 / 6));
+  margin-left: var(--margin);
+  margin-right: var(--margin);
+}
+.container > .col_7 {
+  width: calc(100% / 7 - (var(--padding) * 2) - (var(--margin) * 12 / 7));
+  margin-left: var(--margin);
+  margin-right: var(--margin);
+}
+.container > .col_8 {
+  width: calc(100% / 8 - (var(--padding) * 2) - (var(--margin) * 14 / 8));
+  margin-left: var(--margin);
+  margin-right: var(--margin);
+}
+.container > .col_9 {
+  width: calc(100% / 9 - (var(--padding) * 2) - (var(--margin) * 16 / 9));
+  margin-left: var(--margin);
+  margin-right: var(--margin);
+}
+.container > .col_10 {
+  width: calc(100% / 10 - (var(--padding) * 2) - (var(--margin) * 18 / 10));
+  margin-left: var(--margin);
+  margin-right: var(--margin);
+}
+.container.flex {
+  display: flex;
+  flex-basis: calc(100% / 10);
+  flex-wrap: wrap;
+}
+.container.flex > * {
+  display: flex;
+  flex-direction: column;
+}
+.container > .col_2:nth-child(2n-1),
+.container > .col_3:nth-child(3n-2),
+.container > .col_4:nth-child(4n-3),
+.container > .col_5:nth-child(5n-4),
+.container > .col_6:nth-child(6n-5),
+.container > .col_7:nth-child(7n-6),
+.container > .col_8:nth-child(8n-7),
+.container > .col_9:nth-child(9n-8),
+.container > .col_10:nth-child(10n-9) {
+  margin-left: 0px;
+  margin-right: var(--margin);
+}
+.container > .col_2:nth-child(2n),
+.container > .col_3:nth-child(3n),
+.container > .col_4:nth-child(4n),
+.container > .col_5:nth-child(5n),
+.container > .col_6:nth-child(6n),
+.container > .col_7:nth-child(7n),
+.container > .col_8:nth-child(8n),
+.container > .col_9:nth-child(9n),
+.container > .col_10:nth-child(10n) {
+  margin-right: 0px;
+  margin-left: var(--margin);
+}
+/*scroll horizontal*/
+.container.scroll_hor {
+  white-space: nowrap;
+  overflow-x: auto;
+}
+.container.scroll_hor {
+  display: inline-block;
+}
+/*toggle*/
+label.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 22px;
+  vertical-align: -webkit-baseline-middle;
+  margin-right: 10px;
+}
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 4px;
+  bottom: 3px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  box-shadow: 1px 1px 1px #555555;
+}
+input:checked + .slider {
+  background-color: var(--col-1);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px var(--col-1);
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(16px);
+  -ms-transform: translateX(16px);
+  transform: translateX(16px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
